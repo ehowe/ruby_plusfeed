@@ -16,6 +16,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="htmlentities (v4.3.0, RVM: rbx-master) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.3.0, RVM: rbx-master) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.3.5, RVM: rbx-master) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.3, RVM: rbx-master) [gem]" level="application" />
@@ -54,7 +55,6 @@
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.11, RVM: rbx-master) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.30, RVM: rbx-master) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.1.10, RVM: rbx-master) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="mysql2 (v0.3.7, RVM: rbx-master) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionmailer (v3.1.1, RVM: rbx-master) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="json (v1.6.1, RVM: rbx-master) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="libv8 (v3.3.10.2, RVM: rbx-master) [gem]" level="application" />
