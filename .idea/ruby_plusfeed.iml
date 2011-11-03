@@ -55,6 +55,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.11, RVM: rbx-master) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.30, RVM: rbx-master) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.1.10, RVM: rbx-master) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mysql2 (v0.3.7, RVM: rbx-master) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionmailer (v3.1.1, RVM: rbx-master) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="json (v1.6.1, RVM: rbx-master) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="libv8 (v3.3.10.2, RVM: rbx-master) [gem]" level="application" />
