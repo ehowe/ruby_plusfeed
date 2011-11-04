@@ -19,14 +19,18 @@ xml.feed :xmlns => "http://www.w3.org/2005/Atom" do
         desc = desc + ' <br/><br/><a href="' + @post_data[:base_url] + post[44][1] + '">' + post[44][0] + '</a> originally shared this post:'
       end
       unless post[66].empty?
-        unless post[66][0][1].nil?
-          desc = desc + ' <br/><br/><a href="' + post[66][0][1] + '">' + post[66][0][3] + '</a>'
-        end
-        unless post[66][0][6].nil?
-          unless post[66][0][6][0][1][/image/].nil?
-            desc = desc + ' <p><img src="http:' + post[66][0][6][0][2] + '"/></p>'
-          else
-            desc = desc + ' <a href="' + post[66][0][6][0][8] = '">' + post[66][0][6][0][8] + '</a>'
+        unless post[66][0].nil?
+          unless post[66][0][1].nil?
+            desc = desc + ' <br/><br/><a href="' + post[66][0][1] + '">' + post[66][0][3] + '</a>'
+          end
+          unless post[66][0][6].nil?
+            unless post[66][0][6][0].nil?
+              unless post[66][0][6][0][1].nil?
+                desc = desc + ' <p><img src="http:' + post[66][0][6][0][2] + '"/></p>'
+              else
+                desc = desc + ' <a href="' + post[66][0][6][0][8] = '">' + post[66][0][6][0][8] + '</a>'
+              end
+            end
           end
         end
       end

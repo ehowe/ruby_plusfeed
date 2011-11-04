@@ -91,7 +91,7 @@ class FeedsController < ApplicationController
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = true
     request = Net::HTTP::Get.new(url.request_uri + uri_options)
-    json_response = http.request(request).body.gsub(/^.*\n\n\[/, "[")
+    json_response = presanitize_json(http.request(request).body)
     posts = parse_feed(json_response)
     @post_data = { :author => posts[0][3], :authorimg => posts[0][18], :updated => Time.at(posts[0][5]/1000), :id => posts[0][16], :base_url => "https://plus.google.com/", :posts => posts}
 
@@ -110,5 +110,11 @@ class FeedsController < ApplicationController
   def sanitize_json(json)
     json = json.gsub(/,,/, ',null,').gsub(/,,/, ',null,').gsub('[,','[null,').gsub(',]',',null]').gsub(/\\n/,'')
     return HTMLEntities.new.decode ActiveSupport::JSON.decode(json)[1][0]
+  end
+
+  def presanitize_json(json)
+    json = json.gsub(/^.*\n\n\[/, "[")
+    json = json.gsub(/\\u0026quot;/,'\"')
+    return json
   end
 end
