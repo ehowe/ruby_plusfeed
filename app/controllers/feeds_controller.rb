@@ -1,6 +1,8 @@
 class FeedsController < ApplicationController
   require 'net/http'
 
+  caches_page :gid, :expires_in => 30.minutes
+
   # GET /feeds
   # GET /feeds.json
   def index
