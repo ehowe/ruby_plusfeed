@@ -29,6 +29,8 @@ EOF
       index_content = redis['index']
     else
       index_content = content
+      redis['index'] = content
+      redis.persist('index')
     end
     return index_content
   end
