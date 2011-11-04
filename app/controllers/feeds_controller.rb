@@ -90,10 +90,10 @@ class FeedsController < ApplicationController
     url = URI.parse(base_url)
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = true
-    request = Net::HTTP::Get.new(url.request_uri + uri_options)
-    json_response = presanitize_json(http.request(request).body)
+    req = Net::HTTP::Get.new(url.request_uri + uri_options)
+    json_response = presanitize_json(http.request(req).body)
     posts = parse_feed(json_response)
-    @post_data = { :author => posts[0][3], :authorimg => posts[0][18], :updated => Time.at(posts[0][5]/1000), :id => posts[0][16], :base_url => "https://plus.google.com/", :posts => posts}
+    @post_data = { :author => posts[0][3], :authorimg => posts[0][18], :updated => Time.at(posts[0][5]/1000), :id => posts[0][16], :base_url => "https://plus.google.com/", :request_url => request.env['HTTP_HOST'], :posts => posts}
 
     respond_to do |format|
       format.rss { render :layout => false }

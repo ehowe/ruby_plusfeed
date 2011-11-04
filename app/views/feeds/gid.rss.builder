@@ -2,7 +2,7 @@ xml.instruct! :xml, :version => "1.0"
 xml.feed :xmlns => "http://www.w3.org/2005/Atom" do
     xml.title "#{@post_data[:author]} - Google+ User Feed"
     xml.link :href => @post_data[:base_url] + @post_data[:id], :rel => "alternate"
-    xml.link :href => '/' + @post_data[:id], :rel => "self"
+    xml.link :href => 'http://' + @post_data[:request_url] + '/' + @post_data[:id]
     xml.id @post_data[:base_url] + @post_data[:id]
     xml.updated @post_data[:updated].strftime("%Y-%m-%dT%H:%M:%SZ")
     xml.author { xml.name @post_data[:author] }
