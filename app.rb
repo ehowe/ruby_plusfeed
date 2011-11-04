@@ -9,7 +9,7 @@ class App < Sinatra::Application
   end
 
   get '/:id' do
-    require 'builder'
+#    require 'builder'
     load './lib/feed.rb'
     @post_data = Feed.gid(params, request)
 
