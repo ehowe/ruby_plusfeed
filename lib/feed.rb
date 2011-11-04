@@ -20,7 +20,7 @@ class Feed
       json_response = presanitize_json(http.request(req).body)
       posts = parse_feed(json_response)[1][0]
       redis[params[:id]] = posts
-      redis.expire(param[:id],30*60)
+      redis.expire(params[:id],30*60)
     end
     @post_data = { :author => posts[0][3], :authorimg => posts[0][18], :updated => Time.at(posts[0][5]/1000), :id => posts[0][16], :base_url => "https://plus.google.com/", :request_url => request.env['HTTP_HOST'], :posts => posts}
     return @post_data
