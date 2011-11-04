@@ -1,6 +1,6 @@
 class Index
   def self.content(request)
-     index_content = <<EOF
+     content = <<EOF
 <div id="content">
   <div id="intro">
     <h2>
@@ -25,6 +25,11 @@ class Index
   </div>
 </div>
 EOF
+    unless redis['index']
+      index_content = redis['index']
+    else
+      index_content = content
+    end
     return index_content
   end
 end
