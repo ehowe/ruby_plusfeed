@@ -18,7 +18,7 @@ class Index
         You can grab the source for this app on GitHub <a href="https://github.com/ehowe/ruby_plusfeed">here</a>.
       </p>
       <p>
-        <em>Ruby port created by <a href="http://www.github.com/ehowe">Eugene Howe</a></em>
+        <em>Ruby port created by <a href="http://www.github.com/ehowe">Eugene Howe</a></em><br/>
         <em>Original python project created by <a href="http://www.russellbeattie.com">Russell Beattie</a></em>
       </p>
     </div>
