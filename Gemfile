@@ -12,6 +12,7 @@ gem 'execjs'
 gem 'therubyracer'
 gem 'builder'
 gem 'htmlentities'
+gem 'redis'
 
 # Gems used only for assets and not required
 # in production environments by default.
