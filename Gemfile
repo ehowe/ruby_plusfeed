@@ -13,6 +13,7 @@ gem 'therubyracer'
 gem 'builder'
 gem 'htmlentities'
 gem 'redis'
+gem 'active_support'
 
 
 # To use ActiveModel has_secure_password
