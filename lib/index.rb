@@ -25,6 +25,7 @@ class Index
   </div>
 </div>
 EOF
+    redis = Redis.new
     unless redis['index']
       index_content = redis['index']
     else
