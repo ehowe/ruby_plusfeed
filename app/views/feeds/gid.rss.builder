@@ -4,7 +4,7 @@ xml.feed :xmlns => "http://www.w3.org/2005/Atom" do
     xml.link :href => @post_data[:base_url] + @post_data[:id], :rel => "alternate"
     xml.link :href => '/' + @post_data[:id], :rel => "self"
     xml.id @post_data[:base_url] + @post_data[:id]
-    xml.updated @post_data[:updated]
+    xml.updated @post_data[:updated].strftime("%Y-%m-%dT%H:%M:%SZ")
     xml.author { xml.name @post_data[:author] }
     @post_data[:posts].each do |post|
       post_path = post[21]
