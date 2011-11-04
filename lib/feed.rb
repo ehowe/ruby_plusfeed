@@ -18,8 +18,8 @@ class Feed
       http.use_ssl = true
       req = Net::HTTP::Get.new(url.request_uri + uri_options)
       json_response = presanitize_json(http.request(req).body)
+      redis[params[:id]] = json_response
       posts = parse_feed(json_response)
-      redis[params[:id]] = posts
     end
     @post_data = { :author => posts[0][3], :authorimg => posts[0][18], :updated => Time.at(posts[0][5]/1000), :id => posts[0][16], :base_url => "https://plus.google.com/", :request_url => request.env['HTTP_HOST'], :posts => posts}
     return @post_data
