@@ -11,15 +11,14 @@ GEM
     json (1.6.1)
     libv8 (3.3.10.2)
     multi_json (1.0.3)
-    mysql2 (0.3.7)
     rack (1.3.5)
     rack-protection (1.1.4)
       rack
     redis (2.2.2)
     sinatra (1.3.1)
-      rack (>= 1.3.4, ~> 1.3)
-      rack-protection (>= 1.1.2, ~> 1.1)
-      tilt (>= 1.3.3, ~> 1.3)
+      rack (~> 1.3, >= 1.3.4)
+      rack-protection (~> 1.1, >= 1.1.2)
+      tilt (~> 1.3, >= 1.3.3)
     therubyracer (0.9.8)
       libv8 (~> 3.3.10)
     tilt (1.3.3)
@@ -33,7 +32,6 @@ DEPENDENCIES
   execjs
   htmlentities
   json
-  mysql2
   redis
   sinatra
   therubyracer
