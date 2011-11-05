@@ -5,7 +5,7 @@ class Index
 <div id="header">
   <h1>PlusFeed</h1>
   <h2>Unofficial Google+ User Feeds</h2>
-  <span id="plusone"><g:plusone size="tall" href="http://plusfeed.xtreme-computers.net"></g:plusone></span>
+  <span id="plusone"><g:plusone size="medium" href="http://plusfeed.xtreme-computers.net"></g:plusone></span>
 </div>
 <div id="content">
   <div id="intro">
