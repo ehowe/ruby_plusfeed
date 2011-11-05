@@ -1,6 +1,11 @@
 class Index
   def self.content(request)
      content = <<EOF
+<div id="header">
+  <h1>PlusFeed</h1>
+  <h2>Unofficial Google+ User Feeds</h2>
+  <span id="plusone"><g:plusone size="tall"></g:plusone></span>
+</div>
 <div id="content">
   <div id="intro">
     <h2>
