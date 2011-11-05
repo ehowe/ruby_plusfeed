@@ -1,4 +1,4 @@
-class Feed < App
+class Feed
   def self.gid(params, request)
     require 'net/http'
 

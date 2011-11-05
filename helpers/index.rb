@@ -1,4 +1,4 @@
-class Index < App
+class Index
   def self.content(request)
      content = <<EOF
 <div id="content">
