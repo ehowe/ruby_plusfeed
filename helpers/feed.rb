@@ -1,10 +1,6 @@
 class Feed
   def self.gid(params, request)
-    require 'redis'
     require 'net/http'
-    require 'htmlentities'
-    require 'active_support'
-    require 'json'
 
     redis = Redis.new
     if redis[params[:id]]
