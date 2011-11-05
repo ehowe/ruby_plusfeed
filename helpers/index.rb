@@ -14,8 +14,10 @@ class Index
         Example: <a href="http://#{request.env['HTTP_HOST']}/100073513220520691408">http://#{request.env['HTTP_HOST']}/<strong>100073513220520691408</strong></a>
       </p>
       <p>
-        <br/>
         You can grab the source for this app on GitHub <a href="https://github.com/ehowe/ruby_plusfeed">here</a>.
+      </p>
+      <p>
+        After each initial request, the data will be cached for 30 minutes.
       </p>
       <p>
         <em>Ruby port created by <a href="http://www.github.com/ehowe">Eugene Howe</a></em><br/>
