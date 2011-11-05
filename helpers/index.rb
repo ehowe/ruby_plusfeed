@@ -1,5 +1,6 @@
 class Index
   def self.content(request)
+    redis = Redis.new
     if redis['count']
       count = redis['count'].to_i
     else
@@ -41,7 +42,6 @@ class Index
   </div>
 </div>
 EOF
-    redis = Redis.new
     if redis['index']
       index_content = redis['index']
     else
