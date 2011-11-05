@@ -2,7 +2,7 @@ require 'bundler'
 require './app'
 
 helpers do
-  Dir.glob("helpers/*.rb").each { |helper| load './' + helper }
+  Dir.glob("helpers/*.rb").each { |helper| require './' + helper }
 end
 
 Bundler.require

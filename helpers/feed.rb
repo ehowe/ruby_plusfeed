@@ -18,7 +18,18 @@ class Feed
       redis[params[:id]] = posts
       redis.expire(params[:id],30*60)
     end
-    @post_data = { :author => posts[0][3], :authorimg => posts[0][18], :updated => Time.at(posts[0][5]/1000), :id => posts[0][16], :base_url => "https://plus.google.com/", :request_url => request.env['HTTP_HOST'], :posts => posts}
+    if posts[0].nil?
+      author = params[:id]
+      authorimg = ""
+      updated = Time.now
+      id = params[:id]
+    else
+      author = posts[0][3]
+      authorimg = posts[0][18]
+      updated = Time.at(posts[0][5]/1000)
+      id = posts[0][16]
+    end
+    @post_data = { :author => author, :authorimg => authorimg, :updated => updated, :id => id, :base_url => "https://plus.google.com/", :request_url => request.env['HTTP_HOST'], :posts => posts}
     return @post_data
   end
 
