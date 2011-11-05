@@ -8,7 +8,7 @@ class Index
     end
     content = <<EOF
 <div id="gb">
-  <span>#{count += 1}</span>
+  <span>Requests served so far: #{count += 1}</span>
   <a href="http://plus.google.com">Google+</a>
 </div>
 <div id="header">
@@ -50,6 +50,7 @@ EOF
       redis.persist('index')
     end
     redis['count'] = redis['count'].to_i + 1
+    redis.persist('count')
     return index_content
   end
 end
