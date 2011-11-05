@@ -1,16 +1,7 @@
 class Index
   def self.content(request)
     redis = Redis.new
-    if redis['count']
-      count = redis['count'].to_i
-    else
-      count = 0
-    end
     content = <<EOF
-<div id="gb">
-  <span>Requests served so far: #{count += 1}</span>
-  <a href="http://plus.google.com">Google+</a>
-</div>
 <div id="header">
   <h1>PlusFeed</h1>
   <h2>Unofficial Google+ User Feeds</h2>
@@ -49,8 +40,6 @@ EOF
       redis['index'] = content
       redis.persist('index')
     end
-    redis['count'] = redis['count'].to_i + 1
-    redis.persist('count')
     return index_content
   end
 end
